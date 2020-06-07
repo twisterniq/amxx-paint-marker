@@ -1,0 +1,41 @@
+[en]
+PAINT_MARKER_MENU_ACCESS_TITLE = Choose the player
+PAINT_MARKER_MENU_ACCESS_HAS = \y(allowed)
+PAINT_MARKER_MENU_ACCESS_EMPTY = ""
+PAINT_MARKER_MENU_ACCESS_ON = ^4* ^1You've allowed to use the ^4marker ^1to ^3%n
+PAINT_MARKER_MENU_ACCESS_OFF = ^4* ^1You've forbidden to use the ^4marker ^1to ^3%n
+PAINT_MARKER_MENU_ACCESS_ERROR = ^3* ^1You can't allow the player to use the ^4marker^1, the player has left
+
+PAINT_MARKER_MENU_ACCESS_CVAR = Access to the menu
+
+PAINT_MARKER_MENU_ACCESS_NEXT = Next
+PAINT_MARKER_MENU_ACCESS_BACK = Back
+PAINT_MARKER_MENU_ACCESS_EXIT = Exit
+
+[es]
+PAINT_MARKER_MENU_ACCESS_TITLE = Selecciona al jugador
+PAINT_MARKER_MENU_ACCESS_HAS = \y(habilitado)
+PAINT_MARKER_MENU_ACCESS_EMPTY = ""
+PAINT_MARKER_MENU_ACCESS_ON = ^4* ^1Ha permitido ^4pintar ^1a ^3%n
+PAINT_MARKER_MENU_ACCESS_OFF = ^4* ^1Ha prohibido ^4pintar ^1a ^3%n
+PAINT_MARKER_MENU_ACCESS_ERROR = ^3* ^1No se ha podido habilitar el permiso de pintar, el jugador se ha desconectado
+
+PAINT_MARKER_MENU_ACCESS_CVAR = Acceso al menú
+
+PAINT_MARKER_MENU_ACCESS_NEXT = Más
+PAINT_MARKER_MENU_ACCESS_BACK = Atrás
+PAINT_MARKER_MENU_ACCESS_EXIT = Salir
+
+[ru]
+PAINT_MARKER_MENU_ACCESS_TITLE = Выберите игрока
+PAINT_MARKER_MENU_ACCESS_HAS = \y(есть)
+PAINT_MARKER_MENU_ACCESS_EMPTY = ""
+PAINT_MARKER_MENU_ACCESS_ON = ^4* ^1Вы успешно выдали ^4Маркер ^1игроку ^3%n
+PAINT_MARKER_MENU_ACCESS_OFF = ^4* ^1Вы успешно забрали ^4Маркер ^1у игрока ^3%n
+PAINT_MARKER_MENU_ACCESS_ERROR = ^3* ^1Не удалось выдать ^4Маркер^1, игрок не на сервере
+
+PAINT_MARKER_MENU_ACCESS_CVAR = Доступ к меню
+
+PAINT_MARKER_MENU_ACCESS_NEXT = Далее
+PAINT_MARKER_MENU_ACCESS_BACK = Назад
+PAINT_MARKER_MENU_ACCESS_EXIT = Выход
