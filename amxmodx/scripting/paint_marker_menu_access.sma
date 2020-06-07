@@ -1,5 +1,5 @@
 /*
- * Official resource topic: https://dev-cs.ru/resources/634/
+ * Official resource topic: https://dev-cs.ru/resources/1004/
  */
 
 #include <amxmodx>
