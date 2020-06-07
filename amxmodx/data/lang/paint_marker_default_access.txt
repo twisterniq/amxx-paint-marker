@@ -1,0 +1,8 @@
+[en]
+PAINT_MARKER_DEFAULT_ACCESS_CVAR = Acceso con el que el jugador por defecto podrá pintar
+
+[es]
+PAINT_MARKER_DEFAULT_ACCESS_CVAR = Access at which the player will be able to use the marker by default
+
+[ru]
+PAINT_MARKER_DEFAULT_ACCESS_CVAR = Доступ при котором игрок по стандарту сможет использовать маркер

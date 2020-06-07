@@ -11,6 +11,8 @@ public stock const PluginAuthor[] = "twisterniq";
 public stock const PluginURL[] = "https://github.com/twisterniq/amxx-paint-marker";
 public stock const PluginDescription[] = "Allows to use the marker by default if player has flag access";
 
+new const CONFIG_NAME[] = "paint_marker_default_access";
+
 // If you have Admin Loader by neugomon installed on your server, uncomment this.
 // You can also uncomment this if in your Admin Loader there is a "client_admin"
 // forward.
@@ -20,7 +22,7 @@ public stock const PluginDescription[] = "Allows to use the marker by default if
 	#define client_putinserver client_admin
 #endif
 
-new g_iDefaultAccess;
+new g_iDefaultAccess = ADMIN_BAN;
 
 public plugin_init()
 {
@@ -31,6 +33,8 @@ public plugin_init()
 		.author = PluginAuthor);
 #endif
 
+	register_dictionary("paint_marker_default_access.txt");
+
 	hook_cvar_change(create_cvar(
 		.name = "paint_marker_default_access",
 		.string = "d",
@@ -38,7 +42,12 @@ public plugin_init()
 		.description = fmt("%L", LANG_SERVER, "PAINT_MARKER_DEFAULT_ACCESS_CVAR")),
 		"@OnDefaultAccessChange");
 
-	AutoExecConfig(true, "paint_marker_default_access");
+	AutoExecConfig(true, CONFIG_NAME);
+
+	new szPath[PLATFORM_MAX_PATH];
+	get_localinfo("amxx_configsdir", szPath, charsmax(szPath));
+	server_cmd("exec %s/plugins/%s.cfg", szPath, CONFIG_NAME);
+	server_exec();
 }
 
 public client_putinserver(id)
