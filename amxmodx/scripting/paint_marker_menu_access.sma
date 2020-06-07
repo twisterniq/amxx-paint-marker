@@ -4,7 +4,6 @@
 
 #include <amxmodx>
 #include <amxmisc>
-#include <reapi>
 #include <paint_marker>
 
 public stock const PluginName[] = "Paint Marker: Menu Access";
