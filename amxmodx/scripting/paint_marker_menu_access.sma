@@ -6,8 +6,10 @@
 #include <amxmisc>
 #include <paint_marker>
 
+#pragma semicolon 1
+
 public stock const PluginName[] = "Paint Marker: Menu Access";
-public stock const PluginVersion[] = "1.0.0";
+public stock const PluginVersion[] = "1.0.1";
 public stock const PluginAuthor[] = "twisterniq";
 public stock const PluginURL[] = "https://github.com/twisterniq/amxx-paint-marker";
 public stock const PluginDescription[] = "Adds the ability to set access for player in menu";
@@ -34,12 +36,13 @@ public plugin_init()
 
 	register_menu("func_PaintMarkerMenu", 1023, "@func_PaintMarkerMenu_Handler");
 
-	hook_cvar_change(create_cvar(
+	new pCvar = create_cvar(
 		.name = "paint_marker_menu_access",
 		.string = "a",
 		.flags = FCVAR_NONE,
-		.description = fmt("%L", LANG_SERVER, "PAINT_MARKER_MENU_ACCESS_CVAR")),
-		"@OnMenuAccessChange");
+		.description = fmt("%L", LANG_SERVER, "PAINT_MARKER_MENU_ACCESS_CVAR"));
+	set_pcvar_string(pCvar, "");
+	hook_cvar_change(pCvar, "@OnMenuAccessChange");
 
 	AutoExecConfig(true, "paint_marker_menu_access");
 }

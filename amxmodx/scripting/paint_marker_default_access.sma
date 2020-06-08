@@ -5,8 +5,10 @@
 #include <amxmodx>
 #include <paint_marker>
 
+#pragma semicolon 1
+
 public stock const PluginName[] = "Paint Marker: Default Access";
-public stock const PluginVersion[] = "1.0.0";
+public stock const PluginVersion[] = "1.0.1";
 public stock const PluginAuthor[] = "twisterniq";
 public stock const PluginURL[] = "https://github.com/twisterniq/amxx-paint-marker";
 public stock const PluginDescription[] = "Allows to use the marker by default if player has flag access";
@@ -35,12 +37,13 @@ public plugin_init()
 
 	register_dictionary("paint_marker_default_access.txt");
 
-	hook_cvar_change(create_cvar(
+	new pCvar = create_cvar(
 		.name = "paint_marker_default_access",
 		.string = "d",
 		.flags = FCVAR_NONE,
-		.description = fmt("%L", LANG_SERVER, "PAINT_MARKER_DEFAULT_ACCESS_CVAR")),
-		"@OnDefaultAccessChange");
+		.description = fmt("%L", LANG_SERVER, "PAINT_MARKER_DEFAULT_ACCESS_CVAR"));
+	set_pcvar_string(pCvar, "");
+	hook_cvar_change(pCvar, "@OnDefaultAccessChange");
 
 	AutoExecConfig(true, CONFIG_NAME);
 
