@@ -1,9 +1,6 @@
 /*
- * Official resource topic: https://dev-cs.ru/resources/634/
- *
- * Credits to stupok69 for original plugin Magic Marker v3.1:
- *
-*/
+ * Credits to stupok69 for original plugin Magic Marker v3.1.
+ */
 
 #include <amxmodx>
 #include <amxmisc>
