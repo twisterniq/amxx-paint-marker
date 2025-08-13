@@ -1,7 +1,3 @@
-/*
- * Official resource topic: https://dev-cs.ru/resources/1004/
- */
-
 #include <amxmodx>
 #include <amxmisc>
 #include <paint_marker>
