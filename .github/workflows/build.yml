@@ -3,8 +3,6 @@ name: Build
 on:
   push:
   pull_request:
-  schedule:
-    - cron: "15 0 */7 * *"
 
 jobs:
   build:
